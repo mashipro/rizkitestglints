@@ -74,11 +74,9 @@ const removeIsland = (input) => {
   return newXY;
 };
 
-removeIsland(input1).forEach((element) => {
-  console.log(element);
-});
+console.log("test input1: ", removeIsland(input1));
 
-const generateInput = (removeIsland, count, maxLength = 5, min = 5) => {
+const test = (count, maxLength = 5, min = 5) => {
   if (maxLength < 5) {
     console.error("max length need to be more than 5");
     return;
@@ -102,10 +100,9 @@ const generateInput = (removeIsland, count, maxLength = 5, min = 5) => {
       }
       randomInput.push(element);
     }
-    console.log("input number:", inputNumber, randomInput);
-    console.log("input number:", inputNumber, removeIsland(randomInput));
-    // removeIsland(randomInput)
+    console.log("input:", randomInput);
+    console.log("output:", removeIsland(randomInput));
   }
 };
 
-generateInput(removeIsland, 5, 8);
+test(5, 8);
